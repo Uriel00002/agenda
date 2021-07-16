@@ -6,8 +6,8 @@
 
 <div class="bg-amarillo contenedor sombra">
     <form id="contacto" action="#">
-        <legend>Añada un contacto<span>Todos los campos son abligatorios</span>
-        </legend>
+        <leyend>Añada un contacto<span>Todos los campos son abligatorios</span>
+        </leyend>
 
         <div class="campos">
             <div class="campo">
