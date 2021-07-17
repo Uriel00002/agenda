@@ -22,9 +22,9 @@
                 <label for="telefono">Telefono:</label>
                 <input type="tel" placeholder="nombre contacto" id="telefono">
             </div>
-            <div class="campo enviar">
+        </div>
+        <div class="campo enviar">
                 <input type="submit" value="añadir">
-            </div>
         </div>
     </form>
 </div>
