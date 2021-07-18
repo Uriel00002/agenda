@@ -8,24 +8,7 @@
     <form id="contacto" action="#">
         <leyend>Añada un contacto<span>Todos los campos son abligatorios</span>
         </leyend>
-
-        <div class="campos">
-            <div class="campo">
-                <label for="nombre">Nombre:</label>
-                <input type="text" placeholder="nombre contacto" id="nombre">
-            </div>
-            <div class="campo">
-                <label for="empresa">Empresa:</label>
-                <input type="text" placeholder="nombre Empresa" id="empresa">
-            </div>
-            <div class="campo">
-                <label for="telefono">Telefono:</label>
-                <input type="tel" placeholder="nombre contacto" id="telefono">
-            </div>
-        </div>
-        <div class="campo enviar">
-                <input type="submit" value="añadir">
-        </div>
+        <?php include 'inc/layout/formulario.php'; ?>
     </form>
 </div>
 
@@ -53,7 +36,7 @@
                         <td>pepes inc</td>
                         <td>1242342342</td>
                         <td>
-                            <a class="btn-editar btn" href="#">
+                            <a class="btn-editar btn" href="editar.php?id=1">
                                 <i class="fas fa-pen-square"></i>
                             </a>
 
@@ -70,7 +53,7 @@
                         <td>pepes inc</td>
                         <td>1242342342</td>
                         <td>
-                            <a class="btn-editar btn" href="#">
+                            <a class="btn-editar btn" href="editar.php?id=1">
                                 <i class="fas fa-pen-square"></i>
                             </a>
 
@@ -87,7 +70,7 @@
                         <td>pepes inc</td>
                         <td>1242342342</td>
                         <td>
-                            <a class="btn-editar btn" href="#">
+                            <a class="btn-editar btn" href="editar.php?id=1">
                                 <i class="fas fa-pen-square"></i>
                             </a>
 
