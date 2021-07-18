@@ -37,7 +37,7 @@
         <p class="total-contactos">  <span>   2   </span> Contactos </p>
 
         <div class="contenedor-tabla">
-            <table id="Listado-contactos"> 
+            <table id="Listado-contactos" class="Listado-contactos"> 
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -98,7 +98,7 @@
                     </tr>
                 </tbody>
 
-                
+
             </table>
         </div>
 
