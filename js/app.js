@@ -10,16 +10,28 @@ function eventListeners() {
 function leerFormulario(e) {
     e.preventDefault();
 
-    const nombre = document.querySelector('#nombre').value;
-    const empresa = document.querySelector('#empresa').value;
-    const telefono = document.querySelector('#telefono').value;
+    const nombre = document.querySelector('#nombre').value,
+          empresa = document.querySelector('#empresa').value,
+          telefono = document.querySelector('#telefono').value,  
+          accion = document.querySelector('#accion').value;
 
     if(nombre === '' || empresa === '' || telefono === ''){
         mostrarNotificacion('Todos los campos son obligatorios', 'error');
         
     }
     else {
+        const infoContacto = new FormData();
+        infoContacto.append('nombre', nombre);
+        infoContacto.append('empresa', empresa);
+        infoContacto.append('telefono', telefono);
+        infoContacto.append('accion', accion);
 
+        if(accion === 'crear') {
+            //crearemos un nuevo elemento
+        }
+        else {
+            //editar el contacto
+        }
     }
 }
 
