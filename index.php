@@ -6,8 +6,8 @@
 
 <div class="bg-amarillo contenedor sombra">
     <form id="contacto" action="#">
-        <leyend>Añada un contacto<span>Todos los campos son abligatorios</span>
-        </leyend>
+        <legend>Añada un contacto<span>Todos los campos son abligatorios</span>
+        </legend>
         <?php include 'inc/layout/formulario.php'; ?>
     </form>
 </div>

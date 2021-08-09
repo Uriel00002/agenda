@@ -26,13 +26,40 @@ function leerFormulario(e) {
         infoContacto.append('telefono', telefono);
         infoContacto.append('accion', accion);
 
+         //console.log(...infoContacto);
+
         if(accion === 'crear') {
             //crearemos un nuevo elemento
+            insertarBD(infoContacto);
         }
         else {
             //editar el contacto
         }
     }
+}
+
+
+function insertarBD(datos) {
+    //llamado a ajax
+
+    //crear objeto
+    const xhr = new XMLHttpRequest();
+
+    //Abrir la conexion
+    xhr.open('POST', 'inc/modelos/modelo-contactos.php', true);
+
+    //pasar los datos
+    xhr.onload = function() {
+        if(this.status === 200) {
+            console.log(JSON.parse( xhr.responseText) );
+            //leemos la respuesta de php
+            const respuesta = JSON.parse( xhr.responseText);
+            console.log(respuesta.empresa)
+        }
+    }
+
+    //enviar los datos
+    xhr.send(datos)
 }
 
 
@@ -42,7 +69,7 @@ function mostrarNotificacion(mensaje, clase) {
     notificacion.textContent = mensaje;
 
     //formulario
-    formularioContactos.insertBefore(notificacion, document.querySelector('form leyend'));
+    formularioContactos.insertBefore(notificacion, document.querySelector('form legend'));
 
 
     //ocultary mostrar notificacion

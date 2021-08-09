@@ -95,13 +95,13 @@ form {
     margin-top: 2rem;
 }
 
-form leyend {
+form legend {
     font-family: var(--fuentesecundaria);
     font-size: 2rem;
     text-align: center;
 }
 
-leyend span {
+legend span {
     font-size: 1rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
