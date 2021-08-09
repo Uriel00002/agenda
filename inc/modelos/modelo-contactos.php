@@ -11,27 +11,26 @@ if($POST('accion') == 'crear') {
 
     try {
         $stmt = $conn->prepare("INSERT INTO contactos(nombre, empresa, telefono) VALUES(?, ?, ?)");
-        $stmt->bind_parant("sss", $nombre, $empresa, $telefono);
+        $stmt->bind_param("sss", $nombre, $empresa, $telefono);
         $stmt->execute();
-       if($stmt->affected_rows == 1) {
-           $respuesta = array {
-               'respuesta' => 'correcto',
-               'datos' => array {
-                   'nombre' => $nombre,
-                   'empresa' => $empresa,
-                   'telefono' => $telefono,
-                   'id_insertado' => $stmt->insert_id
-               }
-           }
-       }
+        if($stmt->affected_rows == 1) {
+            $respuesta = array(
+                'respuesta' => 'correcto',
+                'datos' => array(
+                    'nombre' => $nombre,
+                    'empresa' => $empresa,
+                    'telefono'=> $telefono,
+                    'id_insertado' => $stmt->insert_id
+                )
+            );
+        }
         $stmt->close();
         $conn->close();
     } catch(Exception $e) {
-        $respuesta = array {
+        $respuesta = array (
             'error' => $e->getMessage()
-        };
+        );
     }
 
-        echo json_encode(respuesta);
-
-    }
+    echo json_encode($respuesta);
+}
